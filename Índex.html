@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokeFansUY</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+</head>
+<body>
+    
+    <header class="top-bar">
+        <div class="left-section">
+            <img src="img/imgTitulo.gif" alt="Imagen" class="header-img" />
+            <h1>PokeFansUY</h1>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#inicio" onclick="showSection('inicio')">Inicio</a></li>
+                <li><a href="#pokedex" onclick="showSection('pokedex')">Pokédex</a></li>
+                <li><a href="#tabla-tipos" onclick="showSection('tabla-tipos')">Tabla de tipos</a></li>
+                <li><a href="#mapa-regional" onclick="showSection('mapa-regional')">Mapa regional</a></li>
+            </ul>
+        </nav>
+        <div class="right-section">
+            <div class="square">
+                <img src="img/ig.png" alt="Image 1">
+            </div>
+            <div class="square">
+                <img src="img/x.png" alt="Image 2">
+            </div>
+            <div class="square">
+                <img src="img/lk.png" alt="Image 3">
+            </div>
+        </div>
+    </header>
+    <div class="popup-menu" id="popupMenu">
+        <ul>
+            <li>
+                <img src="img/imgTitulo.gif" alt="Inicio" class="menu-icon-left">
+                <a href="#inicio" onclick="selectMenuOption('inicio')">Inicio</a>
+                <img src="img/imgTitulo.gif" alt="Inicio" class="menu-icon-right">
+            </li>
+            <li>
+                <img src="img/imgTitulo.gif" alt="Pokédex" class="menu-icon-left">
+                <a href="#pokedex" onclick="selectMenuOption('pokedex')">Pokédex</a>
+                <img src="img/imgTitulo.gif" alt="Pokédex" class="menu-icon-right">
+            </li>
+            <li>
+                <img src="img/imgTitulo.gif" alt="Tabla de tipos" class="menu-icon-left">
+                <a href="#tabla-tipos" onclick="selectMenuOption('tabla-tipos')">Tabla de tipos</a>
+                <img src="img/imgTitulo.gif" alt="Tabla de tipos" class="menu-icon-right">
+            </li>
+            <li>
+                <img src="img/imgTitulo.gif" alt="Mapa regional" class="menu-icon-left">
+                <a href="#mapa-regional" onclick="selectMenuOption('mapa-regional')">Mapa regional</a>
+                <img src="img/imgTitulo.gif" alt="Mapa regional" class="menu-icon-right">
+            </li>
+        </ul>
+    </div>
+    
+    
+    <main>
+        <section id="inicio" class="content-section">
+            <div class="centered-div">
+                <p>Este es el div centrado que ocupa el 85% de la pantalla.</p>
+            </div>
+        </section>
+        
+        <section id="pokedex" class="content-section" style="display: none">
+            <div class="subtitle-container">
+                <div class="text-above-title">
+                    <p>Esta lista contiene solo los 151 primeros Pokémon de la Pokédex.</p>
+                    <p>Se espera en un futuro seguir agregando más Pokémon y más contenido.</p>
+                </div>
+                <h2>Pokédex regional de Kanto</h2>
+            </div>
+            <div class="grid-container" id="pokemonGrid">
+                <!-- Los elementos de la cuadrícula se generarán dinámicamente aquí -->
+            </div>
+            <div class="pagination-bar">
+                <button id="prevButton" class="pagination-button">←</button>
+                <button id="nextButton" class="pagination-button">→</button>
+            </div>
+        </section>
+
+        <section id="tabla-tipos" class="content-section" style="display: none">
+            <h2>Tabla de tipos</h2>
+            <p>Interacción de los tipos de Pokémon.</p>
+        </section>
+
+        <section id="mapa-regional" class="content-section" style="display: none">
+            <h2>Mapa regional</h2>
+            <p>Descripción del mapa regional de la zona.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>©PokeFansUY 2024 | El contenido original pertenece a The Pokémon Company.</p>
+        <p>Desarrollado por Int-code.</p>
+    </footer>
+</body>
+</html>
