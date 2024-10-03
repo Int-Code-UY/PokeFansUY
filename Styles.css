@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding-top: 80px; /* Espacio superior ajustado a la altura de la barra */
+    background: rgb(5, 5, 5);
+    padding-top: 80px;
+}
+
+.top-bar {
+    position: fixed; /* Mantiene el top bar en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Altura fija de la barra */
+    background: linear-gradient(to right, #680707, #d81f18, #f18b0d);
+    color: white;
+    padding: 0 15px; /* Espaciado horizontal */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    font-family: Arial, sans-serif
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.left-section h1 {
+    font-size: 1.5em;
+    margin-left: 5px; /* Reduce la separación entre la imagen y el título */
+}
+
+.header-img {
+    width: 70px; /* Tamaño de la imagen */
+    height: 70px; /* Mantener proporción */
+    border-radius: 50%;
+}
+
+.menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espacio entre los elementos del menú */
+    margin: 0;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.menu ul li a:hover {
+    text-decoration: none; /* Eliminar subrayado al pasar el mouse */
+}
+
+.right-section {
+    display: flex;
+    margin-right: 10%;
+    position: relative;
+}
+.square {
+    width: 27.77px; /* Ancho de cada cuadrado */
+    height: 25px; /* Alto de cada cuadrado */
+    background-color: transparent
+    border 1px solid black; /* Borde opcional */
+    margin-left:5%; /* Espacio entre los cuadrados */
+    border-radius:10px; /* Bordes redondeados opcional */
+}
+
+.square img {
+    width: 101%;
+    height: 101%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio del div */
+    border-radius: 5px; /* Añade un borde redondeado si lo deseas */
+}
+
+.square:first-child {
+    margin-left: 0; /* El primer cuadrado no necesita margen a la izquierda */
+}
+
+main {
+    padding: 20px;
+}
+
+.content-section h2 {
+    text-align: center; /* Centra el subtítulo */
+    margin-bottom: 10px; /* Reduce el margen inferior */
+    color: rgb(255, 255, 255);
+}
+
+/* Estilo para la cuadrícula */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    grid-template-rows: repeat(7, auto); /* 7 filas automáticas */
+    gap: 20px; /* Espacio entre los divs */
+    margin: 20px 25%; /* Margen de 20px arriba y abajo, y 15% en los lados */
+    justify-content: center; /* Centra la cuadrícula dentro de su contenedor */
+    margin-bottom: 80px;
+}
+
+/* Estilo para cada div de la cuadrícula */
+.grid-item {
+    display: flex;
+    flex-direction: column; /* Colocar los elementos en columna */
+    justify-content: space-between; /* Espacio entre los elementos */
+    background-color: rgb(46, 44, 44); /* Color de fondo del div */
+    aspect-ratio: 1 / 1; /* Mantener el div cuadrado */
+    width: 100%; /* Ancho completo disponible */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 15px; /* Añade esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra para destacar */
+    transition: transform 0.3s ease; /* Transición suave para efectos */
+}
+
+.grid-item:hover {
+    transform: scale(1.05); /* Efecto de zoom suave al pasar el cursor */
+}
+
+.text-above-title {
+    text-align: center; /* Centra el texto */
+    margin-bottom: 20px; /* Espacio debajo del texto */
+    font-size: 1em; /* Aumenta un poco el tamaño de la fuente */
+    color: white;
+    padding-top: 20px; /* Esto asegura que haya un espacio superior que empuje todo hacia abajo */
+    font-size: 0.8em; /* Ajusta el tamaño de la fuente como desees */
+}
+
+.footer {
+    position: relative; /* O fixed si lo deseas siempre visible */
+    bottom: 0; /* Ajusta la posición en la parte inferior */
+    left: 0;
+    width: 100%; /* Ancho completo */
+    background: linear-gradient(to right, #680707, #d81f18, #f18b0d);
+    color: white; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    padding: 10px 0; /* Espaciado vertical */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+    z-index: 1000; /* Para asegurarte de que esté por encima de otros elementos */
+}
+.footer p {
+    font-size: 0.57em; /* Ajusta el tamaño de la fuente como desees */
+}
+
+.pokemon-number {
+    height: 10%; /* Altura del número */
+    display: flex;
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    font-size: 1.2em; /* Tamaño de fuente */
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+.pokemon-image {
+    height: 90%; /* Ajusta la altura según sea necesario */
+    width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho */
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    background-color: rgb(46, 44, 44); /* Color de fondo del div */
+    border-radius: 10px; /* Esquinas redondeadas */
+    
+}
+
+.pokemon-image img {
+    width: 70%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
+    height: 70%; /* Asegura que la imagen ocupe toda la altura del contenedor */
+    object-fit: contain; /* Ajusta la imagen para que se ajuste dentro del contenedor sin recortarla */
+    border-radius: 10px; /* Mantiene las esquinas redondeadas en la imagen */
+    
+}
+
+ 
+.pokemon-name {
+    height: 10%; /* Altura del nombre */
+    display: flex;
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    font-size: 1em; /* Tamaño de fuente */
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+.pagination-bar {
+    display: flex;
+    justify-content: center; /* Centrar la barra de paginación */
+    margin-top: 100px; /* Margen superior para separarla del grid */
+}
+
+.pagination-button {
+    background-color: #FF8C00; /* Color de fondo de los botones */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    font-size: 1.5em; /* Tamaño de fuente */
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 0 10px; /* Espaciado entre los botones */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+.pagination-button:hover {
+    background-color: #8B0000; /* Cambiar color al pasar el mouse */
+}
+#inicio .centered-div {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0; /* Cambia el color de fondo si es necesario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras para darle un efecto 3D opcional */
+    border-radius: 10px; /* Bordes redondeados opcional */
+    margin: 0 auto; /* Asegura que esté centrado horizontalmente */
+
+}
+
+#inicio {
+    position: relative;
+    height: 82vh; /* Ocupar el 100% del alto de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .left-section {
+        margin-left: 0%; /* Alinea el título hacia la izquierda */
+        width: 100%; /* Asegura que ocupe todo el ancho */
+    }
+
+    .menu {
+        display: none; /* Oculta el menú en la barra superior */
+    }
+
+    .right-section {
+        display: none; /* Oculta la sección derecha que contiene los cuadrados */
+    }
+
+    .header-img {
+        width: 50px; /* Ajusta el tamaño de la imagen del título */
+        height: 50px; /* Ajusta el tamaño de la imagen del título */
+        padding: 0px;
+    }
+
+    .top-bar {
+        position: fixed; /* Mantiene el top bar en la parte superior */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px; /* Altura reducida de la barra */
+        background: linear-gradient(to right, #680707, #d81f18, #f18b0d);
+        color: white;
+        padding: 0 0px; /* Espaciado horizontal */
+        display: flex;
+        align-items: center; /* Alineación vertical centrada */
+        justify-content: space-between;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    }
+    
+    .left-section h1 {
+        font-size: 1.5em;
+        margin-left: 0px; /* Reduce la separación entre la imagen y el título */
+        line-height: 60px; /* Alineación vertical (igual a la altura del top-bar) */
+        padding: 0px;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+        grid-template-rows: repeat(10, auto); /* 10 filas automáticas */
+        gap: 20px; /* Espacio entre los divs */
+        margin: 20px 25%; /* Margen de 20px arriba y abajo, y 25% en los lados */
+        justify-content: center; /* Centra la cuadrícula dentro de su contenedor */
+        margin-bottom: 80px; /* Espacio inferior */
+    }
+    .footer p {
+        font-size: 0.6em; /* Ajusta el tamaño de la fuente como desees */
+    }
+    .menu-icon {
+        display: flex;
+        flex-direction: column; /* Coloca las líneas en columna */
+        justify-content: center; /* Centra verticalmente */
+        align-items: center; /* Centra horizontalmente */
+        cursor: pointer; /* Cambia el cursor al pasar el mouse */
+        margin-right: 5%; /* Espacio a la derecha */
+    }
+    
+    .line {
+        width: 30px; /* Ancho de cada línea */
+        height: 4px; /* Alto de cada línea */
+        background-color: white; /* Color de las líneas */
+        border-radius: 2px; /* Bordes redondeados */
+        margin: 4px 0; /* Espaciado entre las líneas */
+    }
+.popup-menu {
+    display: none; /* Oculta el menú por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    top: 0; /* Desde la parte superior */
+    left: 0; /* Desde la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    color: white; /* Color de texto blanco */
+    z-index: 1001; /* Por encima de otros elementos */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+}
+
+.popup-menu ul {
+    list-style: none; /* Sin estilo de lista */
+    text-align: center; /* Centrar texto */
+}
+
+.popup-menu ul li {
+    margin: 20px 0; /* Espacio entre los elementos de la lista */
+}
+
+.popup-menu a {
+    color: white; /* Color de texto */
+    font-size: 1.5em; /* Tamaño de fuente */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.popup-menu a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+.popup-menu ul {
+    list-style: none; /* Elimina los puntos predeterminados de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+.popup-menu ul li {
+    display: flex; /* Alinea los elementos (imagen, texto e imagen) en una fila */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    padding: 10px 20px; /* Espacio interno del elemento */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición de color al hover */
+}
+
+.popup-menu ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Color de fondo al pasar el mouse */
+}
+
+.popup-menu ul li img.menu-icon-left {
+    width: 40px; /* Ajusta el tamaño del ícono izquierdo */
+    height: 40px; /* Ajusta el tamaño del ícono izquierdo */
+    margin-right: 15px; /* Espacio entre el ícono y el texto */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.popup-menu ul li img.menu-icon-right {
+    width: 40px; /* Ajusta el tamaño del ícono derecho */
+    height: 40px; /* Ajusta el tamaño del ícono derecho */
+    margin-left: 15px; /* Espacio entre el texto y el ícono */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.popup-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em; /* Tamaño de fuente del texto */
+    flex-grow: 1; /* Permite que el enlace crezca y ocupe el espacio restante */
+    text-align: center; /* Centra el texto */
+}
+
+.pagination-bar {
+    display: flex;
+    justify-content: center; /* Centrar la barra de paginación */
+    margin-top: 120px; /* Margen superior para separarla del grid */
+    
+}
+.pokemon-number {
+    position: relative; /* Asegura que tenga un contexto de posicionamiento */
+    z-index: 10; /* Valor alto para que tenga prioridad frente a otros divs */
+    height: 10%; /* Mantén la altura del número */
+    display: flex;
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    font-size: 1.2em; /* Tamaño de fuente */
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+}
+@media (min-width: 769px) {
+    .popup-menu {
+        display: none; /* Oculta el menú en pantallas grandes */
+    }
+}
+
+
