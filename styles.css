@@ -144,7 +144,7 @@ body {
     justify-content: space-between; /* Espacio entre los elementos */
     background-color: rgb(46, 44, 44); /* Color de fondo del div */
     aspect-ratio: 1 / 1; /* Mantener el div cuadrado */
-    width: 100%; /* Ancho completo disponible */
+    width: 95%; /* Ancho completo disponible */
     padding: 10px; /* Espaciado interno */
     border-radius: 15px; /* Añade esquinas redondeadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra para destacar */
@@ -334,15 +334,6 @@ main {
     flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples filas */
     justify-content: center; /* Centra los elementos horizontalmente */
     margin: 20px 15%; /* Margen en la parte superior e inferior y en los lados */
-}
-
-.grid-item {
-    width: 30%; /* Ancho del 30% para cada contenedor */
-    margin: 0 0.5%; /* Margen horizontal de 0.5% para espacio entre los contenedores */
-    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
-    display: flex; /* Usamos flexbox para centrar contenido */
-    flex-direction: column; /* Permite que el contenido se apile verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
 }
 
     .footer p {
