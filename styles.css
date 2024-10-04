@@ -329,22 +329,15 @@ main {
     }
    .grid-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, auto);
         grid-template-rows: repeat(11, auto);
         gap: 5px;
-        margin: 20px 15%;
+    
         justify-content: center;
-        margin-bottom: 135px;
+      
         align-items: stretch; /* Asegúrate de que todos los elementos se estiren para llenar la altura de la fila */
         background-color: #496ac4;
     }
-    .grid-item {
-    min-height: 100px; /* Ajusta esto según tus necesidades */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
     .footer p {
         font-size: 0.6em; /* Ajusta el tamaño de la fuente como desees */
     }
