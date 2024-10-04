@@ -327,15 +327,25 @@ main {
         margin-top: 10px;
 
     }
+   .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(11, auto);
+        gap: 5px;
+        margin: 20px 15%;
+        justify-content: center;
+        margin-bottom: 135px;
+        align-items: stretch; /* Asegúrate de que todos los elementos se estiren para llenar la altura de la fila */
+    }
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 5 columnas */
-        grid-template-rows: repeat(11, auto); /* 7 filas automáticas */
-        gap: 5px; /* Espacio entre los divs */
-        margin: 20px 15%; /* Margen de 20px arriba y abajo, y 15% en los lados */
-        justify-content: center; /* Centra la cuadrícula dentro de su contenedor */
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(11, auto);
+        gap: 5px;
+        margin: 20px 15%;
+        justify-content: center;
         margin-bottom: 135px;
-    
+        align-items: stretch; /* Asegúrate de que todos los elementos se estiren para llenar la altura de la fila */
     }
     .footer p {
         font-size: 0.6em; /* Ajusta el tamaño de la fuente como desees */
