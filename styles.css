@@ -309,7 +309,7 @@ main {
         left: 0;
         width: 100%;
         height: 60px; /* Altura reducida de la barra */
-        background: linear-gradient(to right, #680707, #d81f18, #496ac4);
+        background: linear-gradient(to right, #496ac4, #d81f18, #496ac4);
         color: white;
         padding: 0 0px; /* Espaciado horizontal */
         display: flex;
@@ -332,14 +332,10 @@ main {
         grid-template-columns: repeat(3, auto);
         grid-template-rows: repeat(11, auto);
         gap: 5px;
-    
-        justify-content: center;
-      
-        align-items: stretch; /* Asegúrate de que todos los elementos se estiren para llenar la altura de la fila */
         background-color: #496ac4;
     }
     .footer p {
-        font-size: 0.6em; /* Ajusta el tamaño de la fuente como desees */
+        font-size: 0.5em; /* Ajusta el tamaño de la fuente como desees */
     }
     .menu-icon {
         display: flex;
