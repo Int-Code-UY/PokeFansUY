@@ -309,7 +309,7 @@ main {
         left: 0;
         width: 100%;
         height: 60px; /* Altura reducida de la barra */
-        background: linear-gradient(to right, #680707, #d81f18, #f18b0d);
+        background: linear-gradient(to right, #680707, #d81f18, #496ac4);
         color: white;
         padding: 0 0px; /* Espaciado horizontal */
         display: flex;
