@@ -327,13 +327,22 @@ main {
         margin-top: 10px;
 
     }
-   .grid-container {
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        grid-template-rows: repeat(11, auto);
-        gap: 5px;
-        background-color: #496ac4;
-    }
+  .grid-container {
+    display: flex; /* Cambia a flexbox para un mejor control del alineamiento */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples filas */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    margin: 20px 15%; /* Margen en la parte superior e inferior y en los lados */
+}
+
+.grid-item {
+    width: 30%; /* Ancho del 30% para cada contenedor */
+    margin: 0 0.5%; /* Margen horizontal de 0.5% para espacio entre los contenedores */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    display: flex; /* Usamos flexbox para centrar contenido */
+    flex-direction: column; /* Permite que el contenido se apile verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
     .footer p {
         font-size: 0.5em; /* Ajusta el tamaño de la fuente como desees */
     }
