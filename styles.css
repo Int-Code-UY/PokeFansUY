@@ -329,6 +329,8 @@ main {
     }
   .grid-container {
     display: flex; /* Cambia a flexbox para un mejor control del alineamiento */
+    grid-template-columns: repeat(3, 1fr); /* 5 columnas */
+    grid-template-rows: repeat(11, auto); /* 7 filas automáticas */
     flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples filas */
     justify-content: center; /* Centra los elementos horizontalmente */
     margin: 20px 15%; /* Margen en la parte superior e inferior y en los lados */
