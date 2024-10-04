@@ -79,31 +79,6 @@ for (let i = 0; i < 151; i++) {
 let currentPage = 0;
 const itemsPerPage = 30;
 
-function displayPokemon() {
-    const gridContainer = document.getElementById('pokemonGrid');
-    gridContainer.innerHTML = ''; // Limpiar el contenido anterior
-
-    // Calcular el rango de Pokémon a mostrar
-    const start = currentPage * itemsPerPage;
-    const end = start + itemsPerPage;
-    const currentPokemon = pokemonData.slice(start, end);
-
-    // Crear los elementos de Pokémon en el grid
-    currentPokemon.forEach(pokemon => {
-        const gridItem = document.createElement('div');
-        gridItem.className = 'grid-item';
-
-        gridItem.innerHTML = `
-            <div class="pokemon-number">${pokemon.number}</div>
-            <div class="pokemon-image">
-                <img src="${pokemon.image}" alt="${pokemon.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;" />
-            </div>
-            <div class="pokemon-name">${pokemon.name}</div>
-        `;
-
-        gridContainer.appendChild(gridItem);
-    });
-}
 
 function nextPage() {
     if ((currentPage + 1) * itemsPerPage < pokemonData.length) {
@@ -149,9 +124,10 @@ function displayPokemon() {
     const currentPokemon = pokemonData.slice(start, end);
 
     // Crear los elementos de Pokémon en el grid
-    currentPokemon.forEach(pokemon => {
+    currentPokemon.forEach((pokemon, index) => {
         const gridItem = document.createElement('div');
         gridItem.className = 'grid-item';
+        gridItem.onclick = () => showPokemonInfo(start + index); // Aquí se añade el evento
 
         gridItem.innerHTML = `
             <div class="pokemon-number">${pokemon.number}</div>
@@ -164,6 +140,19 @@ function displayPokemon() {
         gridContainer.appendChild(gridItem);
     });
 }
+// Mostrar información del Pokémon
+function showPokemonInfo(pokemonIndex) {
+    const selectedPokemon = pokemonData[pokemonIndex];
+
+    // Aquí actualiza tu HTML de la sección de información del Pokémon
+    document.getElementById('pokemonName').innerText = selectedPokemon.name;
+    document.getElementById('pokemonImage').src = selectedPokemon.image;
+    document.getElementById('pokemonDescription').innerText = `Descripción de ${selectedPokemon.name}`;
+
+    // Muestra la sección de información del Pokémon
+    showSection('pokemonInfo');
+}
+
 function selectMenuOption(section) {
     showSection(section); // Muestra la sección correspondiente
     const popupMenu = document.getElementById('popupMenu');

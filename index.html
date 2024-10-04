@@ -6,13 +6,11 @@
     <title>PokeFansUY</title>
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
-</head>
-<body>
-    
     <header class="top-bar">
         <div class="left-section">
             <img src="img/imgTitulo.gif" alt="Imagen" class="header-img" />
             <h1>PokeFansUY</h1>
+            <img src="img/imgTitulo.gif" alt="Imagen" class="header-img" />
         </div>
         <div class="menu-icon" onclick="toggleMenu()">
             <div class="line"></div>
@@ -29,16 +27,20 @@
         </nav>
         <div class="right-section">
             <div class="square">
-                <img src="img/ig.png" alt="Image 1">
+                <img src="img/x.png" alt="Image 1">
             </div>
             <div class="square">
-                <img src="img/x.png" alt="Image 2">
+                <img src="img/github.png" alt="Image 2">
             </div>
             <div class="square">
                 <img src="img/lk.png" alt="Image 3">
             </div>
         </div>
     </header>
+</head>
+<body>
+    
+   
     <div class="popup-menu" id="popupMenu">
         <ul>
             <li>
@@ -97,6 +99,15 @@
         <section id="mapa-regional" class="content-section" style="display: none">
             <h2>Mapa regional</h2>
             <p>Descripción del mapa regional de la zona.</p>
+        </section>
+        <section id="pokemonInfo" class="content-section" style="display: none;">
+            <h1 id="pokemonName">Nombre del Pokémon</h1>
+            <img id="pokemonImage" src="" alt="Imagen del Pokémon" style="width: 200px; height: auto;" />
+            <div id="pokemonDetails">
+                <p id="pokemonDescription">Descripción del Pokémon aquí.</p>
+                <!-- Agrega más detalles aquí según lo necesites -->
+            </div>
+            <button onclick="showSection('pokedex')">Volver a la Pokédex</button>
         </section>
     </main>
 

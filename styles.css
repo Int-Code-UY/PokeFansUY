@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'GrifosFont'; /* Nombre de la fuente */
+    src: url('cosas/grifos/grifos-font.ttf') format('truetype'); /* Ruta al archivo .ttf */
+    font-weight: normal; /* Peso normal de la fuente */
+    font-style: normal; /* Estilo normal de la fuente */
+}
 * {
     margin: 0;
     padding: 0;
@@ -5,11 +11,15 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    padding-top: 80px; /* Espacio superior ajustado a la altura de la barra */
+    padding-top: 0px; /* Espacio superior ajustado a la altura de la barra */
     background: rgb(5, 5, 5);
-    padding-top: 80px;
+    padding-top: 0px;
+  color:#8cac62
+        flex 1; /* Toma todo el espacio restante */
+    
+  
 }
 
 .top-bar {
@@ -18,7 +28,7 @@ body {
     left: 0;
     width: 100%;
     height: 80px; /* Altura fija de la barra */
-    background: linear-gradient(to right, #680707, #d81f18, #f18b0d);
+    background: linear-gradient(to left, #f18b0d, #d81f18, #680707);
     color: white;
     padding: 0 15px; /* Espaciado horizontal */
     display: flex;
@@ -27,18 +37,29 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
     font-family: Arial, sans-serif
+    position sticky;
 }
+ 
 
 .left-section {
     display: flex;
     align-items: center;
-    margin-left: 10%;
+    margin-left: 0%;
 }
 
+/* Estilo para el h1 dentro de la clase .left-section */
 .left-section h1 {
-    font-size: 1.5em;
-    margin-left: 5px; /* Reduce la separación entre la imagen y el título */
+    font-family: 'GrifosFont', sans-serif; /* Fuente personalizada si la estás usando */
+    font-size: 40px; /* Tamaño de la fuente */
+    color: #496ac4; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 20px; /* Espacio arriba y abajo */
+    -webkit-text-stroke: 1px #ffffff; /* Borde negro */
+    letter-spacing: 4px; /* Espaciado entre letras */
+   
+   
 }
+
 
 .header-img {
     width: 70px; /* Tamaño de la imagen */
@@ -75,32 +96,32 @@ body {
     position: relative;
 }
 .square {
-    width: 27.77px; /* Ancho de cada cuadrado */
-    height: 25px; /* Alto de cada cuadrado */
-    background-color: transparent
-    border 1px solid black; /* Borde opcional */
+    width: 37.77px; /* Ancho de cada cuadrado */
+    height: 35px; /* Alto de cada cuadrado */
+    background-color: rgb(0, 0, 0)
+    border 1px solid rgb(255, 255, 255); /* Borde opcional */
     margin-left:5%; /* Espacio entre los cuadrados */
-    border-radius:10px; /* Bordes redondeados opcional */
+    border-radius:15px; /* Bordes redondeados opcional */
 }
 
 .square img {
     width: 101%;
     height: 101%;
     object-fit: cover; /* Asegura que la imagen cubra todo el espacio del div */
-    border-radius: 5px; /* Añade un borde redondeado si lo deseas */
+    border-radius: 10px; /* Añade un borde redondeado si lo deseas */
+    background-color: transparent
+    
 }
 
 .square:first-child {
     margin-left: 0; /* El primer cuadrado no necesita margen a la izquierda */
 }
 
-main {
-    padding: 20px;
-}
 
 .content-section h2 {
     text-align: center; /* Centra el subtítulo */
-    margin-bottom: 10px; /* Reduce el margen inferior */
+    margin-bottom: 0px; /* Reduce el margen inferior */
+    margin-top: 0px;
     color: rgb(255, 255, 255);
 }
 
@@ -112,7 +133,8 @@ main {
     gap: 20px; /* Espacio entre los divs */
     margin: 20px 25%; /* Margen de 20px arriba y abajo, y 15% en los lados */
     justify-content: center; /* Centra la cuadrícula dentro de su contenedor */
-    margin-bottom: 80px;
+    margin-bottom: 120px;
+
 }
 
 /* Estilo para cada div de la cuadrícula */
@@ -142,17 +164,33 @@ main {
     font-size: 0.8em; /* Ajusta el tamaño de la fuente como desees */
 }
 
+/* Asegurar que el html y body ocupen toda la altura */
+html, body {
+    height: 100%; /* Altura completa */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+}
+
+/* Establecer layout del body */
+body {
+    display: flex;
+    flex-direction: column; /* Alinear elementos en columna */
+    min-height: 100vh; /* Altura mínima igual a la altura del viewport */
+}
+
+/* El main debe ocupar todo el espacio disponible */
+main {
+    flex: 1; /* Toma todo el espacio restante */
+}
+
+/* Footer siempre en la parte inferior */
 .footer {
-    position: relative; /* O fixed si lo deseas siempre visible */
-    bottom: 0; /* Ajusta la posición en la parte inferior */
-    left: 0;
     width: 100%; /* Ancho completo */
-    background: linear-gradient(to right, #680707, #d81f18, #f18b0d);
+    background: linear-gradient(to right, #680707, #d81f18, #f18b0d); /* Fondo con degradado */
     color: white; /* Color del texto */
     text-align: center; /* Centrar el texto */
     padding: 10px 0; /* Espaciado vertical */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
-    z-index: 1000; /* Para asegurarte de que esté por encima de otros elementos */
 }
 .footer p {
     font-size: 0.57em; /* Ajusta el tamaño de la fuente como desees */
@@ -166,7 +204,14 @@ main {
     font-size: 1.2em; /* Tamaño de fuente */
     color: white; /* Cambia el color del texto a blanco */
 }
-
+#pokedex.content-section {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Contenido alineado hacia arriba */
+    min-height: 100vh;
+}
 .pokemon-image {
     height: 90%; /* Ajusta la altura según sea necesario */
     width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho */
@@ -196,10 +241,30 @@ main {
     color: white; /* Cambia el color del texto a blanco */
 }
 
-.pagination-bar {
+#pokedex.content-section {
+    position: relative; /* Posicionamiento relativo para usar posición absoluta en hijos */
+   
+    padding: 20px;
     display: flex;
-    justify-content: center; /* Centrar la barra de paginación */
-    margin-top: 100px; /* Margen superior para separarla del grid */
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el contenido hacia arriba */
+}
+
+/* Contenedor de cuadrícula */
+.grid-container {
+    flex-grow: 1; /* Toma el espacio disponible dentro del section */
+}
+
+/* Barra de paginación */
+.pagination-bar {
+    width: 100%; /* Ancho completo */
+    position: absolute; /* Posición absoluta */
+    bottom: 0; /* En la parte inferior del section */
+    left: 0; /* Alineado a la izquierda */
+  
+    text-align: center; /* Centrar los botones */
+    padding: 10px 0; /* Espaciado */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
 }
 
 .pagination-button {
@@ -216,27 +281,7 @@ main {
 .pagination-button:hover {
     background-color: #8B0000; /* Cambiar color al pasar el mouse */
 }
-#inicio .centered-div {
-    width: 100%;
-    height: 100%;
-    background-color: #f0f0f0; /* Cambia el color de fondo si es necesario */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras para darle un efecto 3D opcional */
-    border-radius: 10px; /* Bordes redondeados opcional */
-    margin: 0 auto; /* Asegura que esté centrado horizontalmente */
 
-}
-
-#inicio {
-    position: relative;
-    height: 82vh; /* Ocupar el 100% del alto de la ventana */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
 /* Media Query para pantallas pequeñas */
 @media (max-width: 768px) {
     .left-section {
@@ -279,15 +324,18 @@ main {
         margin-left: 0px; /* Reduce la separación entre la imagen y el título */
         line-height: 60px; /* Alineación vertical (igual a la altura del top-bar) */
         padding: 0px;
+        margin-top: 10px;
+
     }
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-        grid-template-rows: repeat(10, auto); /* 10 filas automáticas */
-        gap: 20px; /* Espacio entre los divs */
-        margin: 20px 25%; /* Margen de 20px arriba y abajo, y 25% en los lados */
+        grid-template-columns: repeat(3, 1fr); /* 5 columnas */
+        grid-template-rows: repeat(11, auto); /* 7 filas automáticas */
+        gap: 5px; /* Espacio entre los divs */
+        margin: 20px 15%; /* Margen de 20px arriba y abajo, y 15% en los lados */
         justify-content: center; /* Centra la cuadrícula dentro de su contenedor */
-        margin-bottom: 80px; /* Espacio inferior */
+        margin-bottom: 135px;
+    
     }
     .footer p {
         font-size: 0.6em; /* Ajusta el tamaño de la fuente como desees */
@@ -385,7 +433,8 @@ main {
 .pagination-bar {
     display: flex;
     justify-content: center; /* Centrar la barra de paginación */
-    margin-top: 120px; /* Margen superior para separarla del grid */
+   
+    margin-bottom: 30px;
     
 }
 .pokemon-number {
@@ -398,6 +447,24 @@ main {
     font-size: 1.2em; /* Tamaño de fuente */
     color: white; /* Cambia el color del texto a blanco */
 }
+.text-above-title {
+    display: none; /* Oculta el menú en la barra superior */
+}
+.subtitle-container {/* Contenedor Principal */
+    padding-top: 65px;
+    max-width: 800px; /* Ancho máximo */
+    text-align: center; /* Centrar el texto */
+}
+.subtitle-container h2 {
+    color: #ffffff; /* Color de texto oscuro */
+    font-size: 24px; /* Tamaño de fuente */
+    margin: 0; /* Sin margen */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-weight: bold; /* Negrita */
+}
+.pagination-bar {
+   margin-bottom: 0px;
+}
 
 }
 @media (min-width: 769px) {
@@ -405,5 +472,4 @@ main {
         display: none; /* Oculta el menú en pantallas grandes */
     }
 }
-
 
